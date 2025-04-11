@@ -6,10 +6,10 @@
 const newPeriodFormEl = document.getElementsByTagName("form")[0];
 const startDateInputEl = document.getElementById("start-date");
 const endDateInputEl = document.getElementById("end-date");
-const pastPeriodContainer = document.getElementById("past-periods");
+const pastPeriodContainer = document.getElementById("past-date");
 
 // Storage key is an app-wide constant
-const STORAGE_KEY = "period-tracker";
+const STORAGE_KEY = "tracker";
 
 // -------------
 // Event Handlers
@@ -65,7 +65,7 @@ function renderPastPeriods() {
     return;
   }
   pastPeriodContainer.innerHTML = "";
-  pastPeriodHeader.textContent = "Past periods";
+  pastPeriodHeader.textContent = "Past dates";
   periods.forEach((period) => {
     const periodEl = document.createElement("li");
     periodEl.textContent = `From ${formatDate(
